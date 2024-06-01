@@ -1,0 +1,30 @@
+services:
+  backend: 
+    container_name: seu_medicamento_back
+    build: ./Backend
+    ports:
+      - 3001:3001
+    volumes:
+      - ./Backend/src:/Backend/src
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - BACK_PORT=3001
+      - DB_USER=root
+      - DB_PASSWORD=123456
+      - DB_DATABASE=medicamentos
+      - DB_HOST=db
+      - DB_PORT=3306
+  db:
+    image: mysql:8.0.32
+    container_name: db
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 5
