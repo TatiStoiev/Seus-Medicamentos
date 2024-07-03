@@ -18,6 +18,10 @@ export default {
                 type: DataTypes.STRING, 
                 allowNull: false, 
             }, 
+            apresentacao: {
+                type: DataTypes.STRING, 
+                allowNull: false, 
+            },
             uso: {
                 type: DataTypes.STRING, 
                 allowNull: false, 
