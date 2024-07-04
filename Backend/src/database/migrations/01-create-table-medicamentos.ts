@@ -23,11 +23,11 @@ export default {
                 allowNull: false, 
             },
             uso: {
-                type: DataTypes.STRING, 
+                type: DataTypes.TEXT, 
                 allowNull: false, 
             },
             interacoes_medicamentosas: {
-                type: DataTypes.STRING, 
+                type: DataTypes.TEXT, 
                 allowNull: false, 
             },
         });
