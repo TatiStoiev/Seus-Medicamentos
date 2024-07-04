@@ -1,8 +1,8 @@
 export interface IMedicamento {
     id: number,
     nome: string, 
-    principio_ativo: string, 
+    principioAtivo: string, 
     apresentacao: string,
     uso: string, 
-    interacoes_medicamentosas: string
+    interacoesMedicamentosas: string
 }
