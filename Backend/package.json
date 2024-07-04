@@ -4,7 +4,10 @@
   "description": "Projeto Seus-Medicamentos que traz informações sobre medicamentos e interações medicamentosas entre 2 ou mais medicamentos",
   "main": "./build/server",
   "scripts": {
-    "start": "node ./build/server.js",
+    "start": "ts-node ./build/server.ts",
+    "build": "npx -y tsc",
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "dev": "ts-node-dev src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tatiana Stoiev do Carmo",
@@ -18,6 +21,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "mysql2": "^3.10.0",
     "nodemon": "^3.1.2",
     "sequelize": "^6.37.3",

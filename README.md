@@ -12,6 +12,12 @@ Segunda: será a busca das interações medicamentosas entre 2 ou mais medicamen
 Será desenvolvido com o Mysql
 
 ### Backend
-Será desenvolvido com Typescrip e biblioteca Sequelize
+Será desenvolvido utilizando o Docker, Node.js, Express, Sequelize e  Typescrip.
+
+### Instruções de Inicialização do docker:
+Entrar na pasta do projeto;
+Usar o comando docker compose up -d. 
+Dois containers serão inicializados: seus-medicamentos-backend e db
+
 
 
