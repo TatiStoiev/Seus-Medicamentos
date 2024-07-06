@@ -12,7 +12,9 @@ Segunda: será a busca das interações medicamentosas entre 2 ou mais medicamen
 Será desenvolvido com o Mysql
 
 ### Backend
-Será desenvolvido utilizando o Docker, Node.js, Express, Sequelize e  Typescrip.
+Será desenvolvido utilizando o Docker, Node.js, Express, Sequelize e  Typescrip. 
+Será implementa testes unitários e de integração.
+A configuração das regras do ESLinter seguem as de Backend da trybe. 
 
 ### Instruções de Inicialização do docker:
 Entrar na pasta do projeto;

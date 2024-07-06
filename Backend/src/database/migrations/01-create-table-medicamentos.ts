@@ -14,9 +14,10 @@ export default {
                 type: DataTypes.STRING, 
                 allowNull: false, 
             }, 
-            principio_ativo: {
+            principioAtivo: {
                 type: DataTypes.STRING, 
                 allowNull: false, 
+                field: 'principio_ativo'
             }, 
             apresentacao: {
                 type: DataTypes.STRING, 
@@ -26,9 +27,10 @@ export default {
                 type: DataTypes.TEXT, 
                 allowNull: false, 
             },
-            interacoes_medicamentosas: {
+            interacoesMedicamentosas: {
                 type: DataTypes.TEXT, 
                 allowNull: false, 
+                field: 'interacoes_medicamentosas'
             },
         });
     },
