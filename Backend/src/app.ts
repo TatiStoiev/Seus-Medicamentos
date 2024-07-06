@@ -1,7 +1,24 @@
 import express from 'express';
+import router from './routes';
 
-const app = express();
+class App {
+    public app: express.Express;
 
-app.use(express.json());
+    constructor() {
+        this.app = express();
 
-export default app
+        this.app.use(express.json());
+
+        this.routes();
+    }
+
+    private routes(): void {
+        this.app.use(router);
+    }
+
+    public start(PORT: string | number): void {
+        this.app.listen(PORT, () => console.log(`Running on port ${PORT}`));
+    }
+}
+
+export { App };
