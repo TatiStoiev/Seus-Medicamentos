@@ -35,6 +35,7 @@ import {
     principioAtivo: {
         type: DataTypes.STRING, 
         allowNull: false, 
+        field: 'principio_ativo'
     }, 
     apresentacao: {
         type: DataTypes.STRING, 
@@ -47,6 +48,7 @@ import {
     interacoesMedicamentosas: {
         type: DataTypes.STRING, 
         allowNull: false, 
+        field: 'interacoes_medicamentosas'
     }
     }, {
         sequelize: db, 
