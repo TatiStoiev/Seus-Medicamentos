@@ -6,7 +6,7 @@ class Validations {
         const requestedKeys = ['nome', 'principioAtivo', 'apresentacao', 'uso', 'interacoesMedicamentosas'];
         const notFoundKey = requestedKeys.find((key) => !(key in medicamento));
         if (notFoundKey) {
-            return res.status(400).json( { message: `${notFoundKey} é necessária` })
+            return res.status(400).json( { message: `O campo ${notFoundKey} é necessário` })
         }
         next();
     }
