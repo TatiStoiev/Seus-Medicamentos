@@ -8,8 +8,8 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "types": ["node", "mocha", "chai", "sinon", "sinon-chai"] 
+    "types": ["node", "mocha", "chai", "chai-http", "sinon", "sinon-chai"] 
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": ["node_modules"]
 }
