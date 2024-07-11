@@ -5,6 +5,14 @@ export const medicamentoSemChaveUso = {
     interacoesMedicamentosas: "nenhuma",
 }
 
+export const mockMedicamentoSemConteudo = {
+    nome: "", 
+    principioAtivo: "X",
+    apresentacao: "comprimidos", 
+    uso: "oral",
+    interacoesMedicamentosas: "nenhuma",
+}
+
 export const mockMedicamento = {
     nome: "Medicamento X", 
     principioAtivo: "X",
@@ -37,4 +45,23 @@ export const mockMedicamentoCriado2 = {
     apresentacao: "comprimidos", 
     uso: "oral",
     interacoesMedicamentosas: "nenhuma",
+}
+
+export const mockMedicamentoNome = {
+    id: 5,
+    nome: "XXX", 
+    principioAtivo: "X",
+    apresentacao: "comprimidos", 
+    uso: "oral",
+    interacoesMedicamentosas: "nenhuma",
+}
+
+export const resultFindByName = {
+    status: 'SUCCESSFUL',
+    data: mockMedicamentoNome
+}
+
+export const resultFindByPrincipioAtivo = {
+    status: 'SUCCESSFUL',
+    data: mockMedicamentoNome
 }

@@ -1,7 +1,7 @@
 import chai, { expect } from 'chai';
 import sinon, { SinonSpy } from 'sinon';
 import sinonChai from 'sinon-chai';
-import { mockMedicamento, mockMedicamentoCriado } from '../mocks/validationsMocks';
+import { mockMedicamento, mockMedicamentoCriado, resultFindByName, mockMedicamentoNome, resultFindByPrincipioAtivo } from '../mocks/validationsMocks';
 import { Request, Response, NextFunction } from 'express';
 import MedicamentoService from '../../services/Medicamento.service';
 import SequelizeMedicamento from '../../database/models/SequelizeMedicamento';
@@ -49,6 +49,57 @@ describe('Testes da camada controller', () => {
     
             expect(res.status).to.be.calledWith(201);
             expect(res.json).to.have.been.calledWith(mockMedicamentoCriado);
+        })
+    })
+
+
+    describe('Teste para a busca por medicamento por nome', async function () {
+
+        it('Deve buscar o medicamento com sucesso retornando o status 200 e as informações do medicamento encontrado', async function () {
+
+            const medicamentoService = new MedicamentoService();
+            sinon.stub(medicamentoService, 'findMedicamentoByName').resolves(resultFindByPrincipioAtivo as any)
+
+            const medicamentoController = new MedicamentoController(medicamentoService);
+
+            mapStatusHTTPStub.returned(200)
+
+            req = {
+                query: {
+                    nome: 'XXX'
+                }
+            } as unknown as Request;
+
+            await medicamentoController.findMedicamentoByName(req as Request, res as Response);
+             
+    
+            expect(res.status).to.have.been.calledWith(200);
+            expect(res.json).to.have.been.calledWith(mockMedicamentoNome);
+        })
+    })
+
+    describe('Teste para a busca por medicamento por principio ativo', async function () {
+
+        it('Deve buscar o medicamento com sucesso retornando o status 200 e as informações do medicamento encontrado', async function () {
+
+            const medicamentoService = new MedicamentoService();
+            sinon.stub(medicamentoService, 'findMedicamentoByPrincipioAtivo').resolves(resultFindByName as any)
+
+            const medicamentoController = new MedicamentoController(medicamentoService);
+
+            mapStatusHTTPStub.returned(200)
+
+            req = {
+                query: {
+                    principioAtivo: 'X'
+                }
+            } as unknown as Request;
+
+            await medicamentoController.findMedicamentoByPrincipioAtivo(req as Request, res as Response);
+             
+    
+            expect(res.status).to.have.been.calledWith(200);
+            expect(res.json).to.have.been.calledWith(mockMedicamentoNome);
         })
     })
 });
