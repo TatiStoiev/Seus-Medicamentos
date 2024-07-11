@@ -1,25 +1,48 @@
-## Seus-Medicamentos
+# Seus-Medicamentos
 
-A idéia desse projeto nasceu depois de observar que a maioria das pessoas não sabe a melhor forma de tomar seu medicamento e os que tomam mais de um medicamento não sabem sobre as interações medicamentosas que pode ocorrer entre eles. 
+## Visão Geral
 
-O projeto será divido em Backend e Frontend e terá 2 fases: 
+O projeto **Seus-Medicamentos** foi criado para ajudar as pessoas a entenderem a melhor forma de tomar seus medicamentos e a conhecerem possíveis interações medicamentosas entre múltiplos medicamentos. 
 
-Primeira: será a busca por medicamento ou princípio ativo tendo como retorno as informações dele; 
+O projeto é dividido em duas fases:
+1. **Primeira Fase**: Busca por medicamento ou princípio ativo, retornando informações detalhadas sobre eles.
+2. **Segunda Fase**: Busca por interações medicamentosas entre dois ou mais medicamentos.
 
-Segunda: será a busca das interações medicamentosas entre 2 ou mais medicamentos;
+## Estrutura do Projeto
 
-### Banco de dados
-Será desenvolvido com o Mysql
+### Banco de Dados
+O banco de dados utilizado é o MySQL.
 
 ### Backend
-Será desenvolvido utilizando o Docker, Node.js, Express, Sequelize e  Typescrip. 
-Será implementa testes unitários e de integração.
-A configuração das regras do ESLinter seguem as de Backend da trybe. 
+O backend é desenvolvido com as seguintes tecnologias e ferramentas:
+- Docker
+- Node.js
+- Express
+- Sequelize
+- TypeScript
+- ESLint (configuração de backend da Trybe)
+- Testes unitários e de integração (usando Chai)
 
-### Instruções de Inicialização do docker:
-Entrar na pasta do projeto;
-Usar o comando docker compose up -d. 
-Dois containers serão inicializados: seus-medicamentos-backend e db
+#### Rotas Disponíveis
+- `/medicamentos`: Adiciona um novo medicamento.
+- `/medicamentos/searchNome`: Permite buscar medicamentos pelo nome.
+- `/medicamentos/searchPrincipioAtivo`: Permite buscar medicamentos pelo princípio ativo.
+
+## Configuração e Execução
+
+### Pré-requisitos
+- Docker e Docker Compose instalados em sua máquina.
+
+### Inicializando o Docker
+1. Clone este repositório e entre na pasta do projeto:
+   ```sh
+   git clone <URL-do-repositório>
+   cd seus-medicamentos
+2. Usar o comando docker compose up -d. 
+   Dois containers serão inicializados: seus-medicamentos-backend e db
+
+### Testes
+Para rodar os testes, utilize o comando: npm test
 
 
 
