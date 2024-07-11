@@ -13,4 +13,22 @@ export default class MedicamentoService {
         const newMedicamento = await this.medicamentoModel.create(medicamento);
         return { status: 'CREATED', data: newMedicamento };
     }
+
+    public async findMedicamentoByName(nome: string): Promise<ServiceResponse<IMedicamento>> {
+        const medicamento = await this.medicamentoModel.findByName(nome);
+        if (medicamento === null) {
+            return { status: 'NOT_FOUND', data: { message: 'Medicamento não encontrado'} };
+        }
+
+        return { status: 'SUCCESSFUL', data: medicamento };
+    }
+
+    public async findMedicamentoByPrincipioAtivo(principioAtivo: string): Promise<ServiceResponse<IMedicamento>> {
+        const medicamento = await this.medicamentoModel.findByPrincipioAtivo(principioAtivo);
+        if (medicamento === null) {
+            return { status: 'NOT_FOUND', data: { message: 'Medicamento não encontrado'} };
+        }
+
+        return { status: 'SUCCESSFUL', data: medicamento };
+    }
 }
