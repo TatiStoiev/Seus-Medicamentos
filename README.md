@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-O projeto **Seus-Medicamentos** foi criado para ajudar as pessoas a entenderem a melhor forma de tomar seus medicamentos e a conhecerem possíveis interações medicamentosas entre múltiplos medicamentos. 
+O projeto **Seus-Medicamentos** foi criado para ajudar as pessoas conhecer a melhor forma de tomar seus medicamentos e se informarem sobre possíveis interações medicamentosas entre múltiplos medicamentos. 
 
 O projeto é dividido em duas fases:
 1. **Primeira Fase**: Busca por medicamento ou princípio ativo, retornando informações detalhadas sobre eles.
@@ -24,7 +24,7 @@ O backend é desenvolvido com as seguintes tecnologias e ferramentas:
 - Testes unitários e de integração (usando Chai)
 
 #### Rotas Disponíveis
-- `/medicamentos`: Adiciona um novo medicamento.
+- `/medicamentos`: Adiciona um novo medicamentos.
 - `/medicamentos/searchNome`: Permite buscar medicamentos pelo nome.
 - `/medicamentos/searchPrincipioAtivo`: Permite buscar medicamentos pelo princípio ativo.
 
@@ -38,11 +38,22 @@ O backend é desenvolvido com as seguintes tecnologias e ferramentas:
    ```sh
    git clone <URL-do-repositório>
    cd seus-medicamentos
-2. Usar o comando docker compose up -d. 
-   Dois containers serão inicializados: seus-medicamentos-backend e db
 
-### Testes
-Para rodar os testes, utilize o comando: npm test
+2. Usar o comando: 
+    ```sh
+   docker compose up -d
+   
+3. Serão inicializados dois containers: 
+    seus-medicamentos-backend
+    db
+
+## Testes
+
+1. Entre na pasta Backend do projeto e utilize o comando: 
+     ```sh
+   cd Backend
+   npm test
+
 
 
 
