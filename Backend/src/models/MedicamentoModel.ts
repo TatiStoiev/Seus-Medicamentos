@@ -1,7 +1,7 @@
 import SequelizeMedicamento from "../database/models/SequelizeMedicamento";
 import { IMedicamento } from "../interfaces/IMedicamento";
 import { IMedicamentoModel } from "../interfaces/IMedicamentoModel";
-import { NewEntity, MedicamentoFound } from "../interfaces";
+import { NewEntity } from "../interfaces";
 
 export default class MedicamentoModel implements IMedicamentoModel {
     private model = SequelizeMedicamento;
