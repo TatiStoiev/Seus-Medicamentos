@@ -33,6 +33,7 @@ describe('Testes da camada controller', () => {
 
     describe('Teste para a createMedicamento', async function () {
 
+       
         it('Deve criar o medicamento com sucesso retornando o status 201 e as informações do medicamento criado', async function () {
             sinon.stub(SequelizeMedicamento, 'create').resolves(mockMedicamentoCriado as any);
 
