@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-O projeto **Seus-Medicamentos** foi criado para ajudar as pessoas conhecer a melhor forma de tomar seus medicamentos e se informarem sobre possíveis interações medicamentosas entre múltiplos medicamentos. 
+O projeto **Seus-Medicamentos** foi criado com a finalidade de ajudar as pessoas a conhecerem a melhor forma de tomar seus medicamentos e se informarem sobre possíveis interações medicamentosas entre múltiplos medicamentos. 
 
 O projeto é dividido em duas fases:
 1. **Primeira Fase**: Busca por medicamento ou princípio ativo, retornando informações detalhadas sobre eles.
@@ -21,12 +21,12 @@ O backend é desenvolvido com as seguintes tecnologias e ferramentas:
 - Sequelize
 - TypeScript
 - ESLint (configuração de backend da Trybe)
-- Testes unitários e de integração (usando Chai)
+- Testes unitários e de integração (usando Mocha, Chai, Sinon e Supertest)
 
 #### Rotas Disponíveis
-- `/medicamentos`: Adiciona um novo medicamentos.
-- `/medicamentos/searchNome`: Permite buscar medicamentos pelo nome.
-- `/medicamentos/searchPrincipioAtivo`: Permite buscar medicamentos pelo princípio ativo.
+- `/medicine`: Adiciona um novo medicamentos.
+- `/medicine/searchName`: Permite buscar medicamentos pelo nome.
+- `/medicine/searchActivePrinciple`: Permite buscar medicamentos pelo princípio ativo.
 
 ## Configuração e Execução
 
@@ -53,6 +53,8 @@ O backend é desenvolvido com as seguintes tecnologias e ferramentas:
      ```sh
    cd Backend
    npm test
+
+## 
 
 
 
