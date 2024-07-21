@@ -2,17 +2,17 @@ import { Request, Response, NextFunction } from 'express';
 
 class Validations {
 
-    static validateMedicamento(req: Request, res: Response, next: NextFunction): Response | void {
-        const medicamento = req.body;
-        const requestedKeys = ['nome', 'principioAtivo', 'apresentacao', 'uso', 'interacoesMedicamentosas'];
-        const notFoundKey = requestedKeys.find((key) => !(key in medicamento));
+    static validateMedicine(req: Request, res: Response, next: NextFunction): Response | void {
+        const medicine = req.body;
+        const requestedKeys = ['name', 'activePrinciple', 'composition', 'presentation', 'use', 'drugInteractions'];
+        const notFoundKey = requestedKeys.find((key) => !(key in medicine));
         if (notFoundKey) {
-            return res.status(400).json( { message: `O campo ${notFoundKey} é necessário` })
+            return res.status(400).json( { message: `The ${notFoundKey} field must be filled in` })
         }
-        const emptyKey = requestedKeys.find((key) => medicamento[key].trim() === '' );
+        const emptyKey = requestedKeys.find((key) => medicine[key].trim() === '' );
         if (emptyKey) {
             return res.status(400).json( {
-                 message: `O campo ${emptyKey} não pode estar vazio`
+                 message: `The ${emptyKey} field must be filled in`
             });
         }
 
@@ -21,19 +21,19 @@ class Validations {
 
     static validateSearchByName(req: Request, res: Response, next: NextFunction): Response | void {
 
-        const { nome } = req.query;
-        if (nome === '') {
-            return res.status(400).json( { message: 'O campo nome deve estar preenchido' });
+        const { name } = req.query;
+        if (name === '') {
+            return res.status(400).json( { message: 'The name field must be filled in' });
         }
 
         next();
     }
 
-    static validateSearchByPrincipioAtivo(req: Request, res: Response, next: NextFunction): Response | void {
+    static validateSearchByActivePrinciple(req: Request, res: Response, next: NextFunction): Response | void {
 
-        const { principioAtivo } = req.query;
-        if (principioAtivo === '') {
-            return res.status(400).json( { message: 'O campo principioAtivo deve estar preenchido' });
+        const { activePrinciple } = req.query;
+        if (activePrinciple === '') {
+            return res.status(400).json( { message: 'The activePrinciple field must be filled in' });
         }
 
         next();

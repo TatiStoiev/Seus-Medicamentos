@@ -1,40 +1,44 @@
 import { Model, QueryInterface, DataTypes } from 'sequelize';
-import { IMedicamento } from '../../interfaces/IMedicamento';
+import { IMedicine } from '../../interfaces/IMedicine';
 
 export default {
     up(queryInterface: QueryInterface) {
-        return queryInterface.createTable<Model<IMedicamento>>('medicamentos', {
+        return queryInterface.createTable<Model<IMedicine>>('medicines', {
             id: {
                 type: DataTypes.INTEGER, 
                 allowNull: false, 
                 autoIncrement: true,
                 primaryKey: true,
             }, 
-            nome: {
+            name: {
                 type: DataTypes.STRING, 
                 allowNull: false, 
             }, 
-            principioAtivo: {
+            activePrinciple: {
                 type: DataTypes.STRING, 
                 allowNull: false, 
-                field: 'principio_ativo'
+                field: 'active_principle',
             }, 
-            apresentacao: {
+            composition: {
+                type: DataTypes.TEXT, 
+                allowNull: false,
+            },
+            presentation: {
                 type: DataTypes.STRING, 
                 allowNull: false, 
             },
-            uso: {
+            use: {
                 type: DataTypes.TEXT, 
                 allowNull: false, 
             },
-            interacoesMedicamentosas: {
+            drugInteractions: {
                 type: DataTypes.TEXT, 
                 allowNull: false, 
-                field: 'interacoes_medicamentosas'
+                field: 'drug_interactions',
             },
         });
     },
     down(queryInterface: QueryInterface) {
-        return queryInterface.dropTable('medicamentos')
+        return queryInterface.dropTable('medicines')
     }
 }

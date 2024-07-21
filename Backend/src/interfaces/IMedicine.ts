@@ -1,7 +1,6 @@
-export type NewEntity<T> = Omit<T, 'id'>;
-
-export type medicineFound = {
-    name: string;
+export interface IMedicine {
+    id: number,
+    name: string, 
     activePrinciple: string, 
     composition: string,
     presentation: string,

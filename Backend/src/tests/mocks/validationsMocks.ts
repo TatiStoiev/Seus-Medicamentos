@@ -1,67 +1,92 @@
-export const medicamentoSemChaveUso = {
-    nome: "Medicamento X", 
-    principioAtivo: "X",
-    apresentacao: "comprimidos", 
-    interacoesMedicamentosas: "nenhuma",
+export const mockMedicineWithoutUseKey = {
+    name: "Medicamento X", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    drugInteractions: "nenhuma",
 }
 
-export const mockMedicamentoSemConteudo = {
-    nome: "", 
-    principioAtivo: "X",
-    apresentacao: "comprimidos", 
-    uso: "oral",
-    interacoesMedicamentosas: "nenhuma",
+export const mockMedicineWithoutName = {
+    name: "", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
 }
 
-export const mockMedicamento = {
-    nome: "Medicamento X", 
-    principioAtivo: "X",
-    apresentacao: "comprimidos", 
-    uso: "oral",
-    interacoesMedicamentosas: "nenhuma",
+export const mockMedicineCompleted = {
+    name: "Medicamento X", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
 }
 
-export const mockMedicamento2 = {
-    nome: "Medicamento XX", 
-    principioAtivo: "XX",
-    apresentacao: "comprimidos", 
-    uso: "oral",
-    interacoesMedicamentosas: "nenhuma",
+export const mockMedicineCompleted2 = {
+    name: "Medicamento XX", 
+    activePrinciple: "XX",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
 }
 
-export const mockMedicamentoCriado = {
+export const mockMedicineCreated = {
     id: 5,
-    nome: "Medicamento X", 
-    principioAtivo: "X",
-    apresentacao: "comprimidos", 
-    uso: "oral",
-    interacoesMedicamentosas: "nenhuma",
+    name: "Medicamento X", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
 }
 
-export const mockMedicamentoCriado2 = {
+export const mockMedicineCreatedWithoutId = {
+    name: "Medicamento X", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
+}
+
+export const mockMedicineCreated2 = {
     id: 6,
-    nome: "Medicamento XX", 
-    principioAtivo: "XX",
-    apresentacao: "comprimidos", 
-    uso: "oral",
-    interacoesMedicamentosas: "nenhuma",
+    name: "Medicamento XX", 
+    activePrinciple: "XX",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
 }
 
-export const mockMedicamentoNome = {
+export const mockMedicineFindByNameWithId = {
     id: 5,
-    nome: "XXX", 
-    principioAtivo: "X",
-    apresentacao: "comprimidos", 
-    uso: "oral",
-    interacoesMedicamentosas: "nenhuma",
+    name: "XXX", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
+}
+
+export const mockMedicineFound = {
+    name: "XXX", 
+    activePrinciple: "X",
+    composition: "composição",
+    presentation: "comprimidos", 
+    use: "oral",
+    drugInteractions: "nenhuma",
 }
 
 export const resultFindByName = {
     status: 'SUCCESSFUL',
-    data: mockMedicamentoNome
+    data: mockMedicineFound
 }
 
-export const resultFindByPrincipioAtivo = {
+export const resultFindByActivePrinciple = {
     status: 'SUCCESSFUL',
-    data: mockMedicamentoNome
+    data: mockMedicineFound
 }
