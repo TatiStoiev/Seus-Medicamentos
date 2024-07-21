@@ -7,54 +7,60 @@ import {
   } from 'sequelize';
   import db from './index';
 
-  class SequelizeMedicamento extends Model<InferAttributes<SequelizeMedicamento>, InferCreationAttributes<SequelizeMedicamento>> {
+  class SequelizeMedicine extends Model<InferAttributes<SequelizeMedicine>, InferCreationAttributes<SequelizeMedicine>> {
     declare id: CreationOptional<number>; 
 
-    declare nome: string;
+    declare name: string;
 
-    declare principioAtivo: string; 
+    declare activePrinciple: string; 
 
-    declare apresentacao: string; 
+    declare composition: string;
 
-    declare uso: string; 
+    declare presentation: string; 
 
-    declare interacoesMedicamentosas: string; 
+    declare use: string; 
+
+    declare drugInteractions: string; 
   }
 
-  SequelizeMedicamento.init({
+  SequelizeMedicine.init({
     id: {
         type: DataTypes.INTEGER, 
         allowNull: false, 
         autoIncrement: true,
         primaryKey: true,
     }, 
-    nome: {
+    name: {
         type: DataTypes.STRING, 
         allowNull: false, 
     }, 
-    principioAtivo: {
+    activePrinciple: {
         type: DataTypes.STRING, 
         allowNull: false, 
-        field: 'principio_ativo'
+        field: 'active_principle',
     }, 
-    apresentacao: {
+    composition: {
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
+    presentation: {
         type: DataTypes.STRING, 
         allowNull: false, 
     },
-    uso: {
+    use: {
         type: DataTypes.STRING, 
         allowNull: false, 
     },
-    interacoesMedicamentosas: {
+    drugInteractions: {
         type: DataTypes.STRING, 
         allowNull: false, 
-        field: 'interacoes_medicamentosas'
+        field: 'drug_interactions',
     }
     }, {
         sequelize: db, 
-        modelName: 'medicamentos', 
+        modelName: 'SequelizeMedicine', 
         timestamps: false, 
-        tableName: 'medicamentos',
+        tableName: 'medicines',
   });
 
-  export default SequelizeMedicamento;
+  export default SequelizeMedicine;

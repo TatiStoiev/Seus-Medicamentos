@@ -1,12 +1,12 @@
 import { Router } from "express";
-import medicamentoRouter from "./Medicamento.routes";
-import medicamentoNameRouter from "./MedicamentoSearchName.routes";
-import medicamentoPrincipioRouter from "./MedicamentoSearchPrincipio.routes";
+import medicineRouter from "./Medicine.routes";
+import medicineNameRouter from "./MedicineSearchByName.routes";
+import medicineActivePrincipleRouter from "./MedicineSearchByActivePrinciple.routes";
 
 const router = Router();
 
-router.use('/medicamentos', medicamentoRouter);
-router.use('/medicamentos/searchNome', medicamentoNameRouter);
-router.use('/medicamentos/searchPrincipioAtivo', medicamentoPrincipioRouter);
+router.use('/medicine', medicineRouter);
+router.use('/medicine/searchName', medicineNameRouter);
+router.use('/medicine/searchActivePrinciple', medicineActivePrincipleRouter);
 
 export default router; 
