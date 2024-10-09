@@ -1,11 +1,11 @@
 services:
-  backend: 
+  backend-TS: 
     container_name: seu_medicamento_back
-    build: ./Backend
+    build: ./Backend-TS
     ports:
       - 3001:3001
     volumes:
-      - ./Backend/src:/Backend/src
+      - ./Backend-TS/src:/Backend-TS/src
     depends_on:
       db:
         condition: service_healthy
