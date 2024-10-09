@@ -13,8 +13,10 @@ O projeto é dividido em duas fases:
 ### Banco de Dados
 O banco de dados utilizado é o MySQL.
 
-### Backend
-O backend é desenvolvido com as seguintes tecnologias e ferramentas:
+### Backend é dividido em 2 partes: 
+
+##### Backend-TS
+Essa parte do backend é desenvolvido com:
 - Docker
 - Node.js
 - Express
@@ -23,10 +25,16 @@ O backend é desenvolvido com as seguintes tecnologias e ferramentas:
 - ESLint (configuração de backend da Trybe)
 - Testes unitários e de integração (usando Mocha, Chai, Sinon e Supertest)
 
-#### Rotas Disponíveis
+##### Rotas Disponíveis
 - `/medicine`: Adiciona um novo medicamentos.
 - `/medicine/searchName`: Permite buscar medicamentos pelo nome.
 - `/medicine/searchActivePrinciple`: Permite buscar medicamentos pelo princípio ativo.
+
+#### Backend-PY
+Essa parte do backend é desenvolvida com: 
+- Docker 
+- Python 
+- BeautifulSoup 
 
 ## Configuração e Execução
 
