@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "backend-ts",
   "version": "1.0.0",
   "description": "Projeto Seus-Medicamentos que traz informações sobre medicamentos e interações medicamentosas entre 2 ou mais medicamentos",
   "main": "./build/server",
