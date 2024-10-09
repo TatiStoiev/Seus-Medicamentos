@@ -1,5 +1,5 @@
 services:
-  backend-TS: 
+  backend-ts: 
     container_name: seu_medicamento_back
     build: ./Backend-TS
     ports:
