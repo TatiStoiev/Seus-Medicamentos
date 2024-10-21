@@ -1,6 +1,6 @@
 services:
   backend-ts: 
-    container_name: seu_medicamento_back
+    container_name: seu_medicamento_back_ts
     build: ./Backend-TS
     ports:
       - 3001:3001
@@ -16,6 +16,18 @@ services:
       - DB_DATABASE=medicamentos
       - DB_HOST=db
       - DB_PORT=3306
+      
+  backend-py: 
+    container_name: seu_medicamento_back_py
+    build: ./Backend-PY
+    ports: 
+      - 8000:8000
+    volumes: 
+      - ./Backend-PY/:/Backend-PY
+    depends_on:
+      db: 
+        condition: service_healthy
+
   db:
     image: mysql:8.0.32
     container_name: db
