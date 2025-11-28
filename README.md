@@ -22,7 +22,7 @@ Essa parte do backend é desenvolvido com:
 - Express
 - Sequelize
 - TypeScript
-- ESLint (configuração de backend da Trybe)
+- ESLint (configuração de backend da escola de Tecnologia Trybe)
 - Testes unitários e de integração (usando Mocha, Chai, Sinon e Supertest)
 
 ##### Rotas Disponíveis
@@ -52,6 +52,7 @@ Essa parte do backend é desenvolvida com:
    docker compose up -d
    
 3. Serão inicializados três containers: 
+    ```sh
    db
    seu_medicamento_back_py
    seu_medicamento_back_ts
