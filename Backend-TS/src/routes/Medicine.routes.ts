@@ -1,6 +1,6 @@
-import { Request, Response, Router } from "express";
-import MedicineController from "../controllers/Medicine.controller";
-import Validations from "../middlewares/Validations";
+import { Request, Response, Router } from 'express';
+import MedicineController from '../controllers/Medicine.controller';
+import Validations from '../middlewares/Validations';
 
 const medicineController = new MedicineController();
 

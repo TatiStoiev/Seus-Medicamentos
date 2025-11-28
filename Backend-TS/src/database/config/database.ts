@@ -7,6 +7,6 @@ const config: Options = {
     host: process.env.DATABASE_HOST,
     port: Number(process.env.DATABASE_PORT) || 3306,
     dialect: 'mysql',
-}
+};
 
 export = config;

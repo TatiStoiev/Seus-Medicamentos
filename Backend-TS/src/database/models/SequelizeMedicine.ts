@@ -55,7 +55,7 @@ import {
         type: DataTypes.STRING, 
         allowNull: false, 
         field: 'drug_interactions',
-    }
+    },
     }, {
         sequelize: db, 
         modelName: 'SequelizeMedicine', 

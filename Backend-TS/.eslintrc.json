@@ -1,10 +1,23 @@
 {
-    "env": {
-      "es2020": true
-    },
-    "extends": "trybe-backend",
-    "rules": {
-      "sonarjs/no-duplicate-string": ["error", 5]
+  "env": {
+    "es2020": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "trybe-backend",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "sonarjs/no-duplicate-string": ["error", 5]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "import/no-unresolved": "off",
+        "import/extensions": "off"
+      }
     }
-  }
-  
+  ]
+}

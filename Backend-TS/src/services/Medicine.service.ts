@@ -1,8 +1,8 @@
-import { medicineFound, NewEntity } from "../interfaces";
-import MedicineModel from "../models/MedicineModel";
-import { IMedicine } from "../interfaces/IMedicine";
-import { IMedicineModel } from "../interfaces/IMedicineModel";
-import { ServiceResponse } from "../interfaces/ServiceResponse";
+import { medicineFound, NewEntity } from '../interfaces';
+import MedicineModel from '../models/MedicineModel';
+import { IMedicine } from '../interfaces/IMedicine';
+import { IMedicineModel } from '../interfaces/IMedicineModel';
+import { ServiceResponse } from '../interfaces/ServiceResponse';
 
 export default class MedicineService {
     constructor(
@@ -17,7 +17,7 @@ export default class MedicineService {
     public async findMedicineByName(medicineName: string): Promise<ServiceResponse<medicineFound>> {
         const medicine = await this.medicineModel.findByName(medicineName);
         if (medicine === null) {
-            return { status: 'NOT_FOUND', data: { message: 'Medicine not found'} };
+            return { status: 'NOT_FOUND', data: { message: 'Medicine not found' } };
         }
 
         return { status: 'SUCCESSFUL', data: medicine };
@@ -26,7 +26,7 @@ export default class MedicineService {
     public async findMedicineByActivePrinciple(activePrincipleName: string): Promise<ServiceResponse<medicineFound>> {
         const medicine = await this.medicineModel.findByActivePrinciple(activePrincipleName);
         if (medicine === null) {
-            return { status: 'NOT_FOUND', data: { message: 'Medicine not found'} };
+            return { status: 'NOT_FOUND', data: { message: 'Medicine not found' } };
         }
 
         return { status: 'SUCCESSFUL', data: medicine };
