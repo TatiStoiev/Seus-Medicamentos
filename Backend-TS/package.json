@@ -8,7 +8,7 @@
     "build": "npx -y tsc",
     "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "dev": "ts-node-dev src/server.ts",
-    "lint": "eslint --ext .ts --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json src tests",
+    "lint": "eslint --ext .ts --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json src --ignore-pattern src/tests/**",
     "test": "mocha --require ts-node/register src/tests/**/*.ts"
   },
   "author": "Tatiana Stoiev do Carmo",

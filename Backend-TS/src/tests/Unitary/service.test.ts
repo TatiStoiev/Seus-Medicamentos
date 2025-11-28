@@ -12,7 +12,7 @@ describe('Tests for the service layer', () => {
         sinon.restore();
     });
 
-    describe('Tests for create medicine', async () => {
+    describe('Tests for create medicine', function () {
         it('Should create a medicine successfully', async () => {
             sinon.stub(SequelizeMedicine, 'create').resolves(mockMedicineCreated as any);
     
@@ -24,7 +24,7 @@ describe('Tests for the service layer', () => {
         });
     });
 
-    describe('Tests for search medicine by name', async () => {
+    describe('Tests for search medicine by name', function () {
         it('Should find the medicine by name successfully', async () => {
             sinon.stub(SequelizeMedicine, 'findOne').resolves(mockMedicineFindByNameWithId as any);
     
@@ -37,7 +37,7 @@ describe('Tests for the service layer', () => {
         });
     });
 
-    describe('Tests for search medicine by active principle', async () => {
+    describe('Tests for search medicine by active principle', function () {
         it('Should find the medicine by active principle successfully', async () => {
             sinon.stub(SequelizeMedicine, 'findOne').resolves(mockMedicineFindByNameWithId as any);
     

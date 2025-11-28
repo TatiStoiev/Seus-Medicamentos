@@ -7,7 +7,8 @@ import {
   } from 'sequelize';
   import db from './index';
 
-  class SequelizeMedicine extends Model<InferAttributes<SequelizeMedicine>, InferCreationAttributes<SequelizeMedicine>> {
+  class SequelizeMedicine extends Model<InferAttributes<SequelizeMedicine>, 
+  InferCreationAttributes<SequelizeMedicine>> {
     declare id: CreationOptional<number>; 
 
     declare name: string;

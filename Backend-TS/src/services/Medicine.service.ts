@@ -5,16 +5,20 @@ import { IMedicineModel } from '../interfaces/IMedicineModel';
 import { ServiceResponse } from '../interfaces/ServiceResponse';
 
 export default class MedicineService {
-    constructor(
-        private medicineModel: IMedicineModel = new MedicineModel(),
-    ) {}
+    private medicineModel: IMedicineModel;
 
-    public async createMedicine(medicine: NewEntity<IMedicine>): Promise<ServiceResponse<medicineFound>> {
+    constructor(medicineModel: IMedicineModel = new MedicineModel()) {
+    this.medicineModel = medicineModel;
+  }
+
+    public async createMedicine(medicine: NewEntity<IMedicine>): 
+      Promise<ServiceResponse<medicineFound>> {
         const newMedicine = await this.medicineModel.create(medicine);
         return { status: 'CREATED', data: newMedicine };
     }
 
-    public async findMedicineByName(medicineName: string): Promise<ServiceResponse<medicineFound>> {
+    public async findMedicineByName(medicineName: string): 
+      Promise<ServiceResponse<medicineFound>> {
         const medicine = await this.medicineModel.findByName(medicineName);
         if (medicine === null) {
             return { status: 'NOT_FOUND', data: { message: 'Medicine not found' } };
@@ -23,7 +27,8 @@ export default class MedicineService {
         return { status: 'SUCCESSFUL', data: medicine };
     }
 
-    public async findMedicineByActivePrinciple(activePrincipleName: string): Promise<ServiceResponse<medicineFound>> {
+    public async findMedicineByActivePrinciple(activePrincipleName: string): 
+      Promise<ServiceResponse<medicineFound>> {
         const medicine = await this.medicineModel.findByActivePrinciple(activePrincipleName);
         if (medicine === null) {
             return { status: 'NOT_FOUND', data: { message: 'Medicine not found' } };
