@@ -9,7 +9,9 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "sonarjs/no-duplicate-string": ["error", 5]
+    "sonarjs/no-duplicate-string": ["error", 5],
+    "max-lines-per-function": "off",
+    "@typescript-eslint/interface-name-prefix": "off"
   },
   "overrides": [
     {
@@ -17,6 +19,20 @@
       "rules": {
         "import/no-unresolved": "off",
         "import/extensions": "off"
+      }
+    },
+    {
+      "files": ["src/database/migrations/*.ts"],
+      "rules": {
+        "max-lines-per-function": "off"
+      }
+    },
+    {
+      "files": ["**/src/database/seeders/*.ts"],
+      "rules": {
+        "max-len": "off",
+        "max-lines-per-function": "off",
+        "@typescript-eslint/camelcase": "off"
       }
     }
   ]

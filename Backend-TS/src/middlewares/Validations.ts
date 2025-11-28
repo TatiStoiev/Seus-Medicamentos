@@ -3,7 +3,8 @@ import { Request, Response, NextFunction } from 'express';
 class Validations {
     static validateMedicine(req: Request, res: Response, next: NextFunction): Response | void {
         const medicine = req.body;
-        const requestedKeys = ['name', 'activePrinciple', 'composition', 'presentation', 'use', 'drugInteractions'];
+        const requestedKeys = [
+            'name', 'activePrinciple', 'composition', 'presentation', 'use', 'drugInteractions'];
         const notFoundKey = requestedKeys.find((key) => !(key in medicine));
         if (notFoundKey) {
             return res.status(400).json({ message: `The ${notFoundKey} field must be filled in` });
@@ -27,7 +28,8 @@ class Validations {
         next();
     }
 
-    static validateSearchByActivePrinciple(req: Request, res: Response, next: NextFunction): Response | void {
+    static validateSearchByActivePrinciple(req: Request, res: Response, next: NextFunction): 
+        Response | void {
         const { activePrinciple } = req.query;
         if (activePrinciple === '') {
             return res.status(400).json({ message: 'The activePrinciple field must be filled in' });

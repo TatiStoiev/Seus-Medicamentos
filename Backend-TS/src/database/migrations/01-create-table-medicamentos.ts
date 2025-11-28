@@ -2,7 +2,7 @@ import { Model, QueryInterface, DataTypes } from 'sequelize';
 import { IMedicine } from '../../interfaces/IMedicine';
 
 export default {
-    up(queryInterface: QueryInterface) {
+    up(queryInterface: QueryInterface): Promise<void> {
         return queryInterface.createTable<Model<IMedicine>>('medicines', {
             id: {
                 type: DataTypes.INTEGER, 
@@ -38,7 +38,7 @@ export default {
             },
         });
     },
-    down(queryInterface: QueryInterface) {
+    down(queryInterface: QueryInterface): Promise<void> {
         return queryInterface.dropTable('medicines');
     },
 };

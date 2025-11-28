@@ -1,5 +1,5 @@
-import chai, { expect } from 'chai';
 import sinon, { SinonSpy } from 'sinon';
+import chai from 'chai';
 import sinonChai from 'sinon-chai'; 
 import { mockMedicineCompleted, mockMedicineCreated, mockMedicineCreatedWithoutId, mockMedicineFound, resultFindByActivePrinciple, resultFindByName } from '../mocks/validationsMocks';
 import { Request, Response } from 'express';
@@ -9,6 +9,7 @@ import mapStatusHTTP from '../../utils/mapStatusHTTP';
 import SequelizeMedicine from '../../database/models/SequelizeMedicine';
 
 chai.use(sinonChai);
+const { expect } = chai;
 
 describe('Tests for the controller layer', () => {
 
@@ -31,7 +32,7 @@ describe('Tests for the controller layer', () => {
         sinon.restore();        
     });
 
-    describe('Tests for create a new medicine', async function () {
+    describe('Tests for create a new medicine', function () {
 
        
         it('Should create a new medicine successfully and return status status 201 and informations about the created medicine whithout id', async function () {
