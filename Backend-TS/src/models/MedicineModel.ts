@@ -1,7 +1,7 @@
-import SequelizeMedicine from "../database/models/SequelizeMedicine";
-import { IMedicine } from "../interfaces/IMedicine";
-import { IMedicineModel } from "../interfaces/IMedicineModel";
-import { NewEntity, medicineFound } from "../interfaces";
+import SequelizeMedicine from '../database/models/SequelizeMedicine';
+import { IMedicine } from '../interfaces/IMedicine';
+import { IMedicineModel } from '../interfaces/IMedicineModel';
+import { NewEntity, medicineFound } from '../interfaces';
 
 export default class MedicineModel implements IMedicineModel {
     private model = SequelizeMedicine;
@@ -11,7 +11,7 @@ export default class MedicineModel implements IMedicineModel {
 
         const { id, name, activePrinciple, composition, presentation, use, drugInteractions } = medicineCreated;
 
-        const resultMedicineCreated = { name, activePrinciple, composition, presentation, use, drugInteractions }
+        const resultMedicineCreated = { name, activePrinciple, composition, presentation, use, drugInteractions };
 
         return resultMedicineCreated;
     }
@@ -22,18 +22,18 @@ export default class MedicineModel implements IMedicineModel {
 
         const { id, name, activePrinciple, composition, presentation, use, drugInteractions } = medicineFound;
 
-        const resultMedicineFound = { name, activePrinciple, composition, presentation, use, drugInteractions }
+        const resultMedicineFound = { name, activePrinciple, composition, presentation, use, drugInteractions };
 
         return resultMedicineFound; 
     }
 
     async findByActivePrinciple(activePrincipleName: string): Promise<medicineFound | null> {
-        const medicineFound = await this.model.findOne({ where: { activePrinciple: activePrincipleName} });
+        const medicineFound = await this.model.findOne({ where: { activePrinciple: activePrincipleName } });
         if (medicineFound === null) return null; 
 
         const { id, name, activePrinciple, composition, presentation, use, drugInteractions } = medicineFound;
 
-        const resultMedicineFound = { name, activePrinciple, composition, presentation, use, drugInteractions }
+        const resultMedicineFound = { name, activePrinciple, composition, presentation, use, drugInteractions };
 
         return resultMedicineFound;  
     }

@@ -1,7 +1,6 @@
-import { Request, Response } from "express";
-import MedicineService from "../services/Medicine.service";
-import mapStatusHTTP from "../utils/mapStatusHTTP";
-
+import { Request, Response } from 'express';
+import MedicineService from '../services/Medicine.service';
+import mapStatusHTTP from '../utils/mapStatusHTTP';
 
 export default class MedicineController {
     constructor(

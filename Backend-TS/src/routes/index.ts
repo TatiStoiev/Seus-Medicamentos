@@ -1,7 +1,7 @@
-import { Router } from "express";
-import medicineRouter from "./Medicine.routes";
-import medicineNameRouter from "./MedicineSearchByName.routes";
-import medicineActivePrincipleRouter from "./MedicineSearchByActivePrinciple.routes";
+import { Router } from 'express';
+import medicineRouter from './Medicine.routes';
+import medicineNameRouter from './MedicineSearchByName.routes';
+import medicineActivePrincipleRouter from './MedicineSearchByActivePrinciple.routes';
 
 const router = Router();
 
