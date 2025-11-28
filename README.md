@@ -51,15 +51,19 @@ Essa parte do backend é desenvolvida com:
     ```sh
    docker compose up -d
    
-3. Serão inicializados dois containers: 
-    seus-medicamentos-backend
-    db
+3. Serão inicializados três containers: 
+   db
+   seu_medicamento_back_py
+   seu_medicamento_back_ts
+    
 
 ## Testes
 
-1. Entre na pasta Backend do projeto e utilize o comando: 
+# Para os testes do Backend-TS
+
+1. Entre na pasta Backend-TS do projeto e utilize o comando: 
      ```sh
-   cd Backend
+   cd Backend-TS
    npm test
 
 ## 

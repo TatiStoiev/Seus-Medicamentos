@@ -36,7 +36,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=123456
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      interval: 1m30s
-      timeout: 10s
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 10s        # checa a cada 10 segundos
+      timeout: 5s
       retries: 5
+      start_period: 30s
