@@ -22,7 +22,7 @@ Essa parte do backend é desenvolvido com:
 - Express
 - Sequelize
 - TypeScript
-- ESLint (configuração de backend da Trybe)
+- ESLint (configuração de backend da escola de Tecnologia Trybe)
 - Testes unitários e de integração (usando Mocha, Chai, Sinon e Supertest)
 
 ##### Rotas Disponíveis
@@ -51,15 +51,20 @@ Essa parte do backend é desenvolvida com:
     ```sh
    docker compose up -d
    
-3. Serão inicializados dois containers: 
-    seus-medicamentos-backend
-    db
+3. Serão inicializados três containers: 
+    ```sh
+   db
+   seu_medicamento_back_py
+   seu_medicamento_back_ts
+    
 
 ## Testes
 
-1. Entre na pasta Backend do projeto e utilize o comando: 
+# Para os testes do Backend-TS
+
+1. Entre na pasta Backend-TS do projeto e utilize o comando: 
      ```sh
-   cd Backend
+   cd Backend-TS
    npm test
 
 ## 
